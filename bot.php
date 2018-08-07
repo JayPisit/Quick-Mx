@@ -61,7 +61,7 @@ if (!is_null($events['events'])) {
 				if($value=='ค' or $value=='ธ' or $value=='ญ' or $value=='ร' or $value=='ษ' or $value=='ะ' or $value=='โ' or $value=='ั'or $value=='ิ'){
 					$Totalval = $Totalval + 4;
 				}
-				if($value=='ฉ' or $value=='ฌ' or $value=='ณ' or $value=='น' or $value=='ม' or $value=='ห' or $value=='ฎ' or $value=='ฮ' or $value='ฬ'or $value=='ึ'){
+				if($value=='ฉ' or $value=='ฌ' or $value=='ณ' or $value=='น' or $value=='ม' or $value=='ห' or $value=='ฎ' or $value=='ฮ' or $value=='ฬ'or $value=='ึ'){
 					$Totalval = $Totalval + 5;
 				}
 				if($value=='จ' or $value=='ล' or $value=='ว' or $value=='อ' or $value=='ใ'){
