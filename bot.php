@@ -49,6 +49,34 @@ if (!is_null($events['events'])) {
 					$Totalval = $Totalval + 9;
 				}
 
+				if($value=='ก' or $value=='ด' or $value=='ถ' or $value=='ท' or $value=='ภ' or $value=='า' or $value=='ำ' or $value=='่' or $value=='ุ'or $value=='ฤ'){
+					$Totalval = $Totalval + 1;
+				}
+				if($value=='ข' or $value=='ช' or $value=='บ' or $value=='ป' or $value=='ง' or $value=='เ' or $value=='แ' or $value=='ู' or $value=='้'){
+					$Totalval = $Totalval + 2;
+				}
+				if($value=='ฆ' or $value=='ฑ' or $value=='ฒ' or $value=='ต' or $value=='๋'){
+					$Totalval = $Totalval + 3;
+				}
+				if($value=='ค' or $value=='ธ' or $value=='ญ' or $value=='ร' or $value=='ษ' or $value=='ะ' or $value=='โ' or $value=='ั'or $value=='ิ'){
+					$Totalval = $Totalval + 4;
+				}
+				if($value=='ฉ' or $value=='ฌ' or $value=='ณ' or $value=='น' or $value=='ม' or $value=='ห' or $value=='ฎ' or $value=='ฮ' or $value='ฬ'or $value=='ึ'){
+					$Totalval = $Totalval + 5;
+				}
+				if($value=='จ' or $value=='ล' or $value=='ว' or $value=='อ' or $value=='ใ'){
+					$Totalval = $Totalval + 6;
+				}
+				if($value=='ซ' or $value=='ศ' or $value=='ส' or $value=='ี' or $value=='ื' or $value=='๊' ){
+					$Totalval = $Totalval + 7;
+				}
+				if($value=='ผ' or $value=='ฝ' or $value=='พ' or $value=='ฟ' or $value=='ย' or $value=='็'){
+					$Totalval = $Totalval + 8;
+				}
+				if($value=='ฏ' or $value=='ฐ' or $value=='ไ' or $value=='์' ){
+					$Totalval = $Totalval + 9;
+				}
+
 			}
 
 
