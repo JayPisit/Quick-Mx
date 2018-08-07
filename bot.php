@@ -48,6 +48,7 @@ if (!is_null($events['events'])) {
 				if($value=='i' or $value=='r'){
 					$Totalval = $Totalval + 9;
 				}
+				$Totalval = $Totalval + 1;
 			}
 
 
