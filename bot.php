@@ -19,8 +19,8 @@ if (!is_null($events['events'])) {
 			$Totalval = 0;
 			// Build message to reply back
 			$letters = strtolower($text);
-			$array[] = str_split($letters);
-			foreach ($array[] as $value) {
+			$array = str_split($letters);
+			foreach ($array as $value) {
 				if($value=='a' or $value=='j' or $value=='s'){
 					$Totalval = $Totalval + 1;
 				}
@@ -48,7 +48,7 @@ if (!is_null($events['events'])) {
 				if($value=='i' or $value=='r'){
 					$Totalval = $Totalval + 9;
 				}
-				$Totalval = $Totalval + 1;
+
 			}
 
 
