@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 
 			$Totalval = 0;
 			// Build message to reply bac
-			mb_substr($array,$start,mb_strlen($str),'utf-8');
+			$array = preg_split('//u', $str, -1, PREG_SPLIT_NO_EMPTY);
 			//$letters = strtolower($text);
 			//$array = str_split($letters);
 			foreach ($array as $value) {
