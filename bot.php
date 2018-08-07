@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 
 			$Totalval = 0;
 			// Build message to reply back
-			$array=explode("",$text);
+			$array=str_split($text);
 			foreach ($array as &$value) {
 				if($value=='a' or $value=='j' or $value=='s'){
 					$Totalval = $Totalval + 1;
