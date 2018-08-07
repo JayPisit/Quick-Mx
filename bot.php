@@ -18,8 +18,9 @@ if (!is_null($events['events'])) {
 
 			$Totalval = 0;
 			// Build message to reply bac
+
+			$text = strtolower($text);
 			$array = preg_split('//u', $text, -1, PREG_SPLIT_NO_EMPTY);
-			//$letters = strtolower($text);
 			//$array = str_split($letters);
 			foreach ($array as $value) {
 				if($value=='a' or $value=='j' or $value=='s'){
