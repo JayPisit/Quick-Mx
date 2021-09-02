@@ -1,5 +1,5 @@
 <?php
-$access_token = 'rGdH8wrWcCEuOO7JrEjNWwjBZq8ZgLy1mBajYJgjFoKta4u6ncr0ysA/mHswNMYZh1Vb0peZSQHZ80AGHtsurjpQh2R2LD5eTcleSJpJQxzjWecysbUQi1LwCRfOtW3CPGKOzM7GHhj+WV5vJ2c95gdB04t89/1O/w1cDnyilFU=';
+$access_token = 'zQnJoZQT15wo/V4KAH0O1Jq7DnLo6vgxJY0IHAQ6O0iUs5tZpy/0iJ3nv66Jd2Uu5jO/G57zvUyttKDP3v+Jsgq8lDO1OJ9L1/1Viu35CC0SXxzfRC3CA3mKnw/EwjEORxtoIsYsxFhSWKG2HLlULAdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -19,67 +19,20 @@ if (!is_null($events['events'])) {
 			$Totalval = 0;
 			// Build message to reply bac
 
-			$text = strtolower($text);
+			
 			$array = preg_split('//u', $text, -1, PREG_SPLIT_NO_EMPTY);
 			//$array = str_split($letters);
-			foreach ($array as $value) {
-				if($value=='a' or $value=='j' or $value=='s'){
-					$Totalval = $Totalval + 1;
-				}
-				if($value=='b' or $value=='k' or $value=='t'){
-					$Totalval = $Totalval + 2;
-				}
-				if($value=='c' or $value=='l' or $value=='u'){
-					$Totalval = $Totalval + 3;
-				}
-				if($value=='d' or $value=='m' or $value=='v'){
-					$Totalval = $Totalval + 4;
-				}
-				if($value=='e' or $value=='n' or $value=='w'){
-					$Totalval = $Totalval + 5;
-				}
-				if($value=='f' or $value=='o' or $value=='x'){
-					$Totalval = $Totalval + 6;
-				}
-				if($value=='g' or $value=='p' or $value=='y'){
-					$Totalval = $Totalval + 7;
-				}
-				if($value=='h' or $value=='q' or $value=='z'){
-					$Totalval = $Totalval + 8;
-				}
-				if($value=='i' or $value=='r'){
-					$Totalval = $Totalval + 9;
-				}
+			
 
-				if($value=='ก' or $value=='ด' or $value=='ถ' or $value=='ท' or $value=='ภ' or $value=='า' or $value=='ำ' or $value=='่' or $value=='ุ'or $value=='ฤ'){
-					$Totalval = $Totalval + 1;
-				}
-				if($value=='ข' or $value=='ช' or $value=='บ' or $value=='ป' or $value=='ง' or $value=='เ' or $value=='แ' or $value=='ู' or $value=='้'){
-					$Totalval = $Totalval + 2;
-				}
-				if($value=='ฆ' or $value=='ฑ' or $value=='ฒ' or $value=='ต' or $value=='๋'){
-					$Totalval = $Totalval + 3;
-				}
-				if($value=='ค' or $value=='ธ' or $value=='ญ' or $value=='ร' or $value=='ษ' or $value=='ะ' or $value=='โ' or $value=='ั'or $value=='ิ'){
-					$Totalval = $Totalval + 4;
-				}
-				if($value=='ฉ' or $value=='ฌ' or $value=='ณ' or $value=='น' or $value=='ม' or $value=='ห' or $value=='ฎ' or $value=='ฮ' or $value=='ฬ'or $value=='ึ'){
-					$Totalval = $Totalval + 5;
-				}
-				if($value=='จ' or $value=='ล' or $value=='ว' or $value=='อ' or $value=='ใ'){
-					$Totalval = $Totalval + 6;
-				}
-				if($value=='ซ' or $value=='ศ' or $value=='ส' or $value=='ี' or $value=='ื' or $value=='๊' ){
-					$Totalval = $Totalval + 7;
-				}
-				if($value=='ผ' or $value=='ฝ' or $value=='พ' or $value=='ฟ' or $value=='ย' or $value=='็'){
-					$Totalval = $Totalval + 8;
-				}
-				if($value=='ฏ' or $value=='ฐ' or $value=='ไ' or $value=='์' ){
-					$Totalval = $Totalval + 9;
-				}
-
-			}
+			$text = strtoupper($text);
+			$text = str_replace("ERROR_CACHE_MISSING[MS:465233]NE4","",$text);
+			$text = str_replace("P","   จํานวน ",$text);
+			$text = nl2br(str_replace("A"," \r\n ",$text));
+		
+		
+		
+		
+		
 
 
 
@@ -98,13 +51,13 @@ if (!is_null($events['events'])) {
 
 
 
-			//if($text=='Shiba where to eat'){
+			
 
 				$messages = [
 				'type' => 'text',
-				'text' => (string)$Totalval
+				'text' => (string)$text
 
-			];
+				];
 
 
 
