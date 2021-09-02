@@ -27,7 +27,8 @@ if (!is_null($events['events'])) {
 			$text = strtoupper($text);
 			$text = str_replace("ERROR_CACHE_MISSING[MS:465233]NE4","",$text);
 			$text = str_replace("P","   จํานวน ",$text);
-			$text = nl2br(str_replace("A"," \r\n ",$text));
+			$text = str_replace("A"," \r\n ",$text);
+			// $text = nl2br(str_replace("A"," \r\n ",$text));
 		
 		
 		
