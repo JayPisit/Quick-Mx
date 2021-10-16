@@ -20,14 +20,37 @@ if (!is_null($events['events'])) {
 			// Build message to reply bac
 
 			
-			$array = preg_split('//u', $text, -1, PREG_SPLIT_NO_EMPTY);
+			
 			//$array = str_split($letters);
 			
 
 			$text = strtoupper($text);
-			$text = str_replace("ERROR_CACHE_MISSING[MS:465233]NE4","",$text);
-			$text = str_replace("P","   จํานวน ",$text);
-			$text = str_replace("A","\r\n",$text);
+			$keywords = preg_split("/[\s,]+/", $text);
+$base = (int)$keywords[0];
+
+if($keywords[1] == 'CR')
+{
+$cost = 0.3;
+}
+if($keywords[1] == 'HR')
+{
+$cost = 0.4;
+}
+
+if($keywords[3] == 'ขาไม้')
+{
+$wood = 0.3;
+}else{
+$wood = 0;
+}
+
+$total=$base+$cost+$wood;
+$text='ราคาขาย = '.$total.'\r\nBreakdown:\r\nเบส: '.$base.'\r\nค่าตัด: '.$cost.'\r\nค่าขาไม้.: '.$wood;
+			
+			
+			//$text = str_replace("ERROR_CACHE_MISSING[MS:465233]NE4","",$text);
+			//$text = str_replace("P","   จํานวน ",$text);
+			//$text = str_replace("A","\r\n",$text);
 			// $text = nl2br(str_replace("A"," \r\n ",$text));
 		
 		
