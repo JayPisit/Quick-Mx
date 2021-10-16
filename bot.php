@@ -45,13 +45,13 @@ $wood = 0;
 }
 
 $total=$base+$cost+$wood;
-$text='ราคาขาย = '.$total.'&Breakdown:&เบส: '.$base.'&ค่าตัด: '.$cost.'&ค่าขาไม้.: '.$wood;
+$text='ราคาขาย = '.$total.'&Breakdown:&เบส: '.$base.'&ค่าตัด: '.$cost.'&ค่าขาไม้: '.$wood;
 
 			if($base == 0){$text='Format ผิด';}
 			
 			//$text = str_replace("ERROR_CACHE_MISSING[MS:465233]NE4","",$text);
 			//$text = str_replace("P","   จํานวน ",$text);
-			$text = str_replace("&","\r\n",$text);
+			$text = str_replace("&"," \r\n ",$text);
 			//$text = nl2br(str_replace("A"," \r\n ",$text));
 		
 		
