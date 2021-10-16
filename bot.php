@@ -45,7 +45,7 @@ $wood = 0;
 }
 
 $total=$base+$cost+$wood;
-$text='ราคาขาย = '.$total.'\r\nBreakdown:\r\nเบส: '.$base.'\r\nค่าตัด: '.$cost.'\r\nค่าขาไม้.: '.$wood;
+$text=nl2br('ราคาขาย = '.$total.'\r\nBreakdown:\r\nเบส: '.$base.'\r\nค่าตัด: '.$cost.'\r\nค่าขาไม้.: '.$wood;)
 			
 			
 			//$text = str_replace("ERROR_CACHE_MISSING[MS:465233]NE4","",$text);
