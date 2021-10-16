@@ -47,7 +47,7 @@ $wood = 0;
 $total=$base+$cost+$wood;
 $text=nl2br('ราคาขาย = '.$total.'\r\nBreakdown:\r\nเบส: '.$base.'\r\nค่าตัด: '.$cost.'\r\nค่าขาไม้.: '.$wood);
 
-			if($base == 0){$text='Format ผิด'}
+			if($base == 0){$text='Format ผิด';}
 			
 			//$text = str_replace("ERROR_CACHE_MISSING[MS:465233]NE4","",$text);
 			//$text = str_replace("P","   จํานวน ",$text);
