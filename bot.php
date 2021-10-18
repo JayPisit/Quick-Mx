@@ -46,10 +46,10 @@ $wood = 0.3;
 
 $total=$base+$cost+$wood;
 
-$text='ราคาขาย = '.$total.
-' \r\n[Breakdown cost] \r\nเบส: '.$base.
-' \r\nค่าตัด: '.$cost.
-' \r\nค่าขาไม้: '.$wood;
+$text=' ราคาขาย = '.$total.
+' \r\n [Breakdown cost] \r\n เบส: '.$base.
+' \r\n ค่าตัด: '.$cost.
+' \r\n ค่าขาไม้: '.$wood;
 			
 if($base == 0){$text='Format ผิด';}
 			
