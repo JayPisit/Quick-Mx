@@ -27,31 +27,35 @@ if (!is_null($events['events'])) {
 			$text = strtoupper($text);
 			$keywords = preg_split("/[\s,]+/", $text);
 $base = (int)$keywords[0];
-
-if($keywords[1] == 'CR')
+$cost = 0;
+$wood = 0;
+if(in_array("แผ่น",$keywords))
 {
 $cost = 0.3;
 }
-if($keywords[1] == 'HR')
+if(in_array("สลีท",$keywords))
 {
-$cost = 0.4;
+$cost = 0.5;
 }
-
-if($keywords[3] == 'ขาไม้')
+if(in_array("ขาไม้",$keywords))
 {
 $wood = 0.3;
-}else{
-$wood = 0;
 }
+			
+			
 
 $total=$base+$cost+$wood;
-$text='ราคาขาย = '.$total.'&Breakdown:&เบส: '.$base.'&ค่าตัด: '.$cost.'&ค่าขาไม้: '.$wood;
 
-			if($base == 0){$text='Format ผิด';}
+$text='ราคาขาย = '.$total.
+' \r\n[Breakdown cost] \r\nเบส: '.$base.
+' \r\nค่าตัด: '.$cost.
+' \r\nค่าขาไม้: '.$wood;
+			
+if($base == 0){$text='Format ผิด';}
 			
 			//$text = str_replace("ERROR_CACHE_MISSING[MS:465233]NE4","",$text);
 			//$text = str_replace("P","   จํานวน ",$text);
-			$text = str_replace("&"," \r\n ",$text);
+//$text = str_replace("&"," \r\n ",$text);
 			//$text = nl2br(str_replace("A"," \r\n ",$text));
 		
 		
