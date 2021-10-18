@@ -29,11 +29,11 @@ if (!is_null($events['events'])) {
 $base = (int)$keywords[0];
 $cost = 0;
 $wood = 0;
-if(in_array("แผ่น",$keywords))
+if(in_array("เหล็กแผ่น",$keywords))
 {
 $cost = 0.3;
 }
-if(in_array("สลีท",$keywords))
+if(in_array("เหล็กสลีท",$keywords))
 {
 $cost = 0.5;
 }
@@ -47,7 +47,7 @@ $wood = 0.3;
 $total=$base+$cost+$wood;
 
 $text=' ราคาขาย = '.$total.
-'&[Breakdown cost]&เบส: '.$base.
+'&&[Cost breakdown]&เบส: '.$base.
 '&ค่าตัด: '.$cost.
 '&ค่าขาไม้: '.$wood;
 			
