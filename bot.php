@@ -47,7 +47,8 @@ $wood = 0.3;
 
 $total=$base+$cost+$wood;
 
-$text=' Ref: &ราคาขาย = '.$total.
+$text=' Ref:'.$ref.
+'&ราคาขาย = '.$total.
 '&&[Cost breakdown]&เบส: '.floatval($base).
 '&ค่าตัด: '.$cost.
 '&ค่าขาไม้: '.$wood;
