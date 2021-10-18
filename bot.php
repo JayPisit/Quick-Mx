@@ -41,7 +41,8 @@ $cost = 0.5;
 }
 if(in_array("ขาไม้",$keywords))
 {
-$wood = 80*int($weight/1000);
+$size=int($weight/1000)
+$wood = 80*$size;
 }
 			
 			
