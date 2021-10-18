@@ -41,7 +41,7 @@ $cost = 0.5;
 }
 if(in_array("ขาไม้",$keywords))
 {
-$wood = 150;
+$wood = 80*int($weight/1000);
 }
 			
 			
@@ -52,6 +52,7 @@ $text=' Ref:'.$ref.
 '&ราคาขาย = '.$total.
 '&&[Cost breakdown]&เบส: '.floatval($base).
 '&ค่าตัด: '.$cost.
+'&นํ้าหนัก '.$weight.
 '&ค่าขาไม้: '.$wood;
 			
 if($base == 0){$text='Format ผิด';}
