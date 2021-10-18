@@ -28,6 +28,7 @@ if (!is_null($events['events'])) {
 			$keywords = preg_split("/[\s,]+/", $text);
 $ref = $keywords[0];
 $base = floatval($keywords[1]);
+$weight = preg_replace('/[^0-9]/', '', $keywords[2]);
 $cost = 0;
 $wood = 0;
 if(in_array("เหล็กแผ่น",$keywords))
@@ -40,12 +41,12 @@ $cost = 0.5;
 }
 if(in_array("ขาไม้",$keywords))
 {
-$wood = 0.3;
+$wood = 150;
 }
 			
 			
 
-$total=$base+$cost+$wood;
+$total=($base+$cost)*$weight+$wood;
 
 $text=' Ref:'.$ref.
 '&ราคาขาย = '.$total.
