@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
 
 			$text = strtoupper($text);
 			$keywords = preg_split("/[\s,]+/", $text);
-$base = (int)$keywords[0];
+$base = floatval($keywords[0]);
 $cost = 0;
 $wood = 0;
 if(in_array("เหล็กแผ่น",$keywords))
@@ -47,7 +47,7 @@ $wood = 0.3;
 $total=$base+$cost+$wood;
 
 $text=' ราคาขาย = '.$total.
-'&&[Cost breakdown]&เบส: '.$base.
+'&&[Cost breakdown]&เบส: '.floatval($base).
 '&ค่าตัด: '.$cost.
 '&ค่าขาไม้: '.$wood;
 			
