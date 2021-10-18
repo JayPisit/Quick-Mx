@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
 
 			$text = strtoupper($text);
 			$keywords = preg_split("/[\s,]+/", $text);
-$ref = floatval($keywords[0]);
+$ref = $keywords[0];
 $base = floatval($keywords[1]);
 $cost = 0;
 $wood = 0;
